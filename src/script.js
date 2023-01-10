@@ -1,10 +1,13 @@
 var commands = document.getElementById("commands");
 var user_input = document.getElementById("user_input");
+var terminal_outputs = document.getElementById("terminal_outputs");
+
 
 function execute(input){
-    var newCommand = document.createElement("li");
-    newCommand.innerHTML = input;
-    commands.appendChild(newCommand);
+    let output;
+    input = input.toLowerCase();
+    output = `<div>testing the input is ${input}</div>`;
+    terminal_outputs.innerHTML = `${terminal_outputs.innerHTML + output}`;
 }
 
 function key(e){
