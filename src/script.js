@@ -1,13 +1,6 @@
 var commands = document.getElementById("commands");
 var user_input = document.getElementById("user_input");
 
-temp_btn.addEventListener("click", function(){
-    var newCommand = document.createElement("li");
-    newCommand.innerHTML = commandline.value;
-    commands.appendChild(newCommand);
-    commandline.value = "";
-});
-
 function execute(input){
     var newCommand = document.createElement("li");
     newCommand.innerHTML = input;
@@ -15,7 +8,7 @@ function execute(input){
 }
 
 function key(e){
-    const input = user_input.innerHTML;
+    const input = user_input.value;
 
     if(e.key == "Enter"){
         execute(input);
